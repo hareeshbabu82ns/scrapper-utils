@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{title}}</title>
+
+  <style>
+    .slokas {
+      list-style: none;
+    }
+
+    .slokam {
+      font-size: large;
+      line-height: 1.5em;
+      letter-spacing: .2rem;
+      border-style: dashed;
+      border-width: 1px;
+      padding: 1em;
+      margin-bottom: .1em;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="slokas">
+    {{#each slokas}}
+    <li class="slokam">
+      {{#each this.contents}}
+      {{this}}<br />
+      {{/each}}
+    </li>
+    <br />
+    {{/each}}
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "devhub-scrapper",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "start-ocr": "node src/ocr/ocr_doc_text.js",
+    "conv-to-md": "node src/dev_json_to_md.js",
+    "conv-to-wiki": "node src/dev_json_to_wiki.js",
+    "conv-to-pdf": "node src/pdf/dev_json_to_pdf.js",
+    "del-at-wiki": "node src/del_wiki_at_path.js",
+    "conv-ramayan-to-md": "node src/ramayan_json_to_md.js",
+    "conv-ramayan-to-wiki": "node src/ramayan_json_to_wiki.js",
+    "conv-ramayan-to-pdf": "node src/pdf/ramayan_json_to_pdf.js",
+    "conv-bhagavatham-to-md": "node src/pothana_bhagavatham_json_to_md.js",
+    "conv-bhagavatham-to-wiki": "node src/pothana_bhagavatham_json_to_wiki.js",
+    "conv-bhagavatham-to-pdf": "node src/pdf/pothana_bhagavatham_json_to_pdf.js"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^2.4.2",
+    "@indic-transliteration/sanscript": "^1.2.7",
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.1",
+    "lodash": "^4.17.21",
+    "luxon": "^2.4.0",
+    "node-fetch": "^3.2.6",
+    "pdf-creator-node": "^2.3.5",
+    "pdf2pic": "^2.1.4",
+    "pdfkit": "^0.13.0",
+    "selenium-webdriver": "^4.8.1",
+    "sqlite3": "^5.1.4",
+    "tesseract.js": "^2.1.5"
+  }
+}

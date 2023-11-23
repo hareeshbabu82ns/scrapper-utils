@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{title}}</title>
+
+  <style>
+    .ghatta-title {
+      text-align: center;
+    }
+
+    .slokas {
+      list-style: none;
+    }
+
+    .slokam {
+      font-size: large;
+      line-height: 1.5em;
+      letter-spacing: .2rem;
+      border-style: dashed;
+      border-width: 1px;
+      padding: 1em;
+      margin-bottom: .1em;
+    }
+
+    .artham {
+      font-size: medium;
+      line-height: 1.2em;
+      letter-spacing: .2rem;
+      padding: 1em;
+      margin-bottom: .1em;
+    }
+
+    .artham-word {
+      font-weight: 600;
+      padding: .3em;
+    }
+
+    .tatparyam {
+      font-size: medium;
+      line-height: 1.5em;
+      letter-spacing: .2rem;
+      padding: 1em;
+      margin-bottom: .1em;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="ghattas">
+    {{#each ghattas}}
+    <h3 class="ghatta-title">{{this.description}}</h3>
+    <h6 class="ghatta-title">{{this.title}}</h6>
+
+    <p>{{this.introduction}}</p>
+    <br />
+
+    <ul class="slokas">
+      {{#each this.contents}}
+      <li class="slokam">
+        {{#each this.contents}}
+        {{this}}<br />
+        {{/each}}
+      </li>
+
+      <li>
+        <!-- <audio controls="controls">
+          <source type="audio/mp3" src="{{this.audio}}">
+        </audio> -->
+        <a href="{{this.source}}">{{this.audio}}</a>
+      </li>
+
+      <li class="artham">
+        <table>
+          {{#each this.artham}}
+          <tr>
+            <td class="artham-word">{{this.word}}</td>
+            <td>{{this.meaning}}</td>
+          </tr>
+          {{/each}}
+        </table>
+      </li>
+
+      <li class="tatparyam">
+        {{this.tatparyam}}
+      </li>
+
+      {{/each}}
+    </ul>
+    {{/each}}
+
+
+
+  </ul>
+</body>
+
+</html>
