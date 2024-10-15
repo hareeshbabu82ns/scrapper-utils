@@ -10,6 +10,7 @@
     "conv-to-wiki": "node src/dev_json_to_wiki.js",
     "conv-to-pdf": "node src/pdf/dev_json_to_pdf.js",
     "del-at-wiki": "node src/del_wiki_at_path.js",
+    "conv-ramayan-to-audio": "node src/ramayan_json_to_audio.js",
     "conv-ramayan-to-md": "node src/ramayan_json_to_md.js",
     "conv-ramayan-to-wiki": "node src/ramayan_json_to_wiki.js",
     "conv-ramayan-to-pdf": "node src/pdf/ramayan_json_to_pdf.js",
